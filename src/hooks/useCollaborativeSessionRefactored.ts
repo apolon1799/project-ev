@@ -46,8 +46,8 @@ export const useCollaborativeSessionRefactored = () => {
     counter: { value: 0, lastUpdatedBy: '', lastUpdatedAt: 0 }
   });
 
-  const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const heartbeatIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const heartbeatIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const isInitializedRef = useRef(false);
 
   const { messages, postMessage, clearReceivedMessages, error } = useBroadcastChannel('collaborative-dashboard');

@@ -3,7 +3,7 @@ import { useCollaborativeSession } from '../hooks/useCollaborativeSession';
 import UserList from './UserList';
 import SharedCounter from './SharedCounter';
 import Chat from './Chat';
-import { Users, MessageSquare, Hash, Zap, Globe, Activity } from 'lucide-react';
+import { Users, MessageSquare, Hash, Zap, Activity } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
   const {

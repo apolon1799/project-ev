@@ -85,7 +85,6 @@ The project is configured for automatic deployment to GitHub Pages using GitHub 
 
 3. **Access Your App**
    - Your app will be available at: `https://apolon1799.github.io/project-ev/`
-   - Replace `yourusername` with your GitHub username
 
 ### Manual Deployment
 
