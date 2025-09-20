@@ -1,0 +1,18 @@
+export const CSS_CLASSES = {
+  CONTAINER: "bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 h-full",
+  HEADER: "text-center",
+  TITLE_CONTAINER: "flex items-center justify-center gap-3 mb-6",
+  ICON_CONTAINER: "p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl",
+  TITLE: "text-2xl font-bold text-white",
+  COUNTER_DISPLAY: "relative mb-8",
+  COUNTER_VALUE: "text-8xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2",
+  COUNTER_GLOW: "absolute inset-0 text-8xl font-bold text-purple-500/20 blur-sm -z-10",
+  BUTTON_GRID: "grid grid-cols-2 gap-4 mb-8",
+  BASE_BUTTON: "group flex items-center justify-center gap-2 px-6 py-4 text-white rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg",
+  RESET_BUTTON: "group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25 mx-auto mb-8",
+  INFO_CARD: "bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6",
+  INFO_HEADER: "flex items-center gap-3 text-purple-200 mb-3",
+  INFO_TITLE: "font-semibold",
+  INFO_VALUE: "text-xl font-bold text-white mb-2",
+  INFO_TIMESTAMP: "text-sm text-purple-300",
+};

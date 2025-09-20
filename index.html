@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CollabSync - Real-time Collaboration Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Enable debug mode for react-broadcast-sync
+      window.process = window.process || {};
+      window.process.env = window.process.env || {};
+      window.process.env.REACT_APP_DEBUG_BROADCAST = 'true';
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'glow': 'glow 2s ease-in-out infinite',
+              'shimmer': 'shimmer 2s infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' }
+              },
+              glow: {
+                '0%, 100%': { boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' },
+                '50%': { boxShadow: '0 0 30px rgba(168, 85, 247, 0.6)' }
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+        50% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.6); }
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .animate-float { animation: float 3s ease-in-out infinite; }
+      .animate-glow { animation: glow 2s ease-in-out infinite; }
+      .animate-shimmer {
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        background-size: 200% 100%;
+        animation: shimmer 2s infinite;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb { background: rgba(168, 85, 247, 0.5); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(168, 85, 247, 0.7); }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
