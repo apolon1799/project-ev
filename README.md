@@ -64,6 +64,38 @@ A real-time collaboration dashboard that synchronizes user activity across multi
 npm run build
 ```
 
+## GitHub Pages Deployment
+
+The project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Setup Instructions
+
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages**
+   - Go to your repository on GitHub
+   - Navigate to Settings → Pages
+   - Under "Source", select "GitHub Actions"
+   - The workflow will automatically deploy on every push to main branch
+
+3. **Access Your App**
+   - Your app will be available at: `https://apolon1799.github.io/project-ev/`
+   - Replace `yourusername` with your GitHub username
+
+### Manual Deployment
+
+If you need to deploy manually:
+
+```bash
+npm run build
+npx gh-pages -d dist
+```
+
 ## How to Test
 
 1. **Open Multiple Tabs**: Open the dashboard in 2-3 browser tabs
